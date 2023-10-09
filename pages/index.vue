@@ -376,7 +376,7 @@
     padding: 10rem;
     margin-top: 19rem;
     color: white;
-    // display: flex;
+    box-shadow: 0px 30px 50px 0px #00000066;
 
     h3 {
       text-align: center;
