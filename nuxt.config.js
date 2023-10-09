@@ -17,18 +17,17 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         name: 'keywords',
-        content:
-          'design capital, get design capital, design capital africa, design capital for startups, startup',
+        content: 'mira, order at restaurant',
       },
       {
         hid: 'description',
         name: 'description',
         content:
-          "Connect with *top tier designers who'll invest up to $100k in design work in exceptional early stage companies, in return for equity.",
+          'Whether you run a single restaurant, bar, club, cafe, hotel or a chain of venues, enhance your order management and improve your revenue.',
       },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: '' },
-      { hid: 'og:title', property: 'og:title', content: 'Design Capital' },
+      { hid: 'og:title', property: 'og:title', content: 'Mira' },
       {
         hid: 'og:image',
         property: 'og:image',
@@ -38,20 +37,20 @@ export default {
         hid: 'og:description',
         property: 'og:description',
         content:
-          "Connect with *top tier designers who'll invest up to $100k in design work in exceptional early stage companies, in return for equity.",
+          'Whether you run a single restaurant, bar, club, cafe, hotel or a chain of venues, enhance your order management and improve your revenue.',
       },
       { property: 'twitter:card', content: 'summary_large_image' },
       { property: 'twitter:url', content: '' },
       {
         hid: 'twitter:title',
         property: 'twitter:title',
-        content: 'Design Capital',
+        content: 'Mira',
       },
       {
         hid: 'twitter:description',
         property: 'twitter:description',
         content:
-          "Connect with *top tier designers who'll invest up to $100k in design work in exceptional early stage companies, in return for equity.",
+          'Whether you run a single restaurant, bar, club, cafe, hotel or a chain of venues, enhance your order management and improve your revenue.',
       },
       {
         hid: 'twitter:image',
