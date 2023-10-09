@@ -27,7 +27,7 @@
       </nuxt-link>
     </div>
     <div class="nav__menu">
-      <nuxt-link class="c-link" to="/team">Pricing</nuxt-link>
+      <nuxt-link class="c-link" to="">Pricing</nuxt-link>
       <a class="c-link" href="mailto:info@getdesigncapital.com" target="_blank">
         Blog
       </a>
