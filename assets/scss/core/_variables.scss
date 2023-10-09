@@ -1,0 +1,19 @@
+$color-purple: #9d00ff;
+$color-green: #6ae692;
+$color-blue: #4d9fea;
+
+$color-dark-green: #01261e;
+
+$ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+:root {
+  --layout-horizontal-padding: 6rem;
+
+  @media screen and (max-width: 980px) {
+    --layout-horizontal-padding: 4rem;
+  }
+
+  @media screen and (max-width: 750px) {
+    --layout-horizontal-padding: 1.8rem;
+  }
+}
