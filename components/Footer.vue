@@ -43,7 +43,7 @@
         </div>
         <div class="footer__menu-column">
           <span class="footer__menu-title">Products</span>
-          <a href="" target="_blank">Order at table</a>
+          <nuxt-link to="order">Order at table</nuxt-link>
           <a href="" target="_blank">Pay at table</a>
           <a href="" target="_blank">Direct orders</a>
           <a href="" target="_blank">Reservations</a>
