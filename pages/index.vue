@@ -126,6 +126,41 @@
         </div>
       </div>
     </section>
+    <section class="home__customers">
+      <h2 class="u-font-h2">Trusted by leading restaurants</h2>
+      <client-only>
+        <flickity
+          ref="flickity"
+          class="home__customers-carousel"
+          :options="flickityOptions"
+        >
+          <div class="home__customers-restaurant">
+            <img src="../assets/images/pitstop.png" alt="restaurant image" />
+            <p>PitStop Lagos</p>
+          </div>
+          <div class="home__customers-restaurant">
+            <img src="../assets/images/circa.png" alt="restaurant image" />
+            <p>Circa</p>
+          </div>
+          <div class="home__customers-restaurant">
+            <img src="../assets/images/slow.png" alt="restaurant image" />
+            <p>sLoW</p>
+          </div>
+          <div class="home__customers-restaurant">
+            <img src="../assets/images/pitstop.png" alt="restaurant image" />
+            <p>PitStop Lagos</p>
+          </div>
+          <div class="home__customers-restaurant">
+            <img src="../assets/images/circa.png" alt="restaurant image" />
+            <p>Circa</p>
+          </div>
+          <div class="home__customers-restaurant">
+            <img src="../assets/images/slow.png" alt="restaurant image" />
+            <p>sLoW</p>
+          </div>
+        </flickity>
+      </client-only>
+    </section>
     <section class="home__operations">
       <h2 class="u-font-h2">Optimise your operations</h2>
       <p class="home__operations-subtext">
@@ -170,6 +205,22 @@
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      flickityOptions: {
+        initialIndex: 1,
+        prevNextButtons: false,
+        pageDots: false,
+        wrapAround: true,
+        autoPlay: 3000,
+      },
+    }
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .home {
@@ -327,6 +378,34 @@
       P:first-of-type {
         font-size: 3.2rem;
         margin: 1.5rem 0;
+      }
+    }
+  }
+
+  &__customers {
+    &-carousel {
+      margin-top: 7.6rem;
+      width: 100vw;
+      position: relative;
+      width: 100vw;
+      left: calc(-50vw + 50%);
+    }
+
+    &-restaurant {
+      width: 22%;
+      margin: 0 2rem;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 52rem;
+        background: grey;
+        border-radius: 3rem;
+      }
+
+      p {
+        text-align: center;
+        margin-top: 2rem;
       }
     }
   }
