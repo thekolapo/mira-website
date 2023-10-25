@@ -16,7 +16,7 @@
         </a>
       </div>
       <div class="order__hero-media">
-        <img src="" alt="" />
+        <img src="../assets/images/order-hero.png" alt="hero image" />
       </div>
     </section>
     <section class="order__features">
@@ -161,6 +161,15 @@
       border-radius: 5rem;
       margin-top: 9.6rem;
       box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transform: scale(1.13);
+      }
     }
   }
 

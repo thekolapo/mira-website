@@ -13,7 +13,7 @@
         </a>
       </div>
       <div class="home__hero-media">
-        <img src="" alt="" />
+        <img src="../assets/images/home-hero.png" alt="hero image" />
       </div>
     </section>
     <section class="home__features">
@@ -22,7 +22,7 @@
       </h2>
       <div class="home__features-list">
         <div class="home__features-item">
-          <img src="" alt="" />
+          <img src="../assets/images/home-dashboard.png" alt="feature image" />
           <p>Sell with ease, from behind the counter</p>
           <a href="">
             Learn more
@@ -44,7 +44,7 @@
           </a>
         </div>
         <div class="home__features-item">
-          <img src="" alt="" />
+          <img src="../assets/images/home-order.png" alt="feature image" />
           <p>Sell with ease, from behind the counter</p>
           <a href="">
             Learn more
@@ -66,7 +66,7 @@
           </a>
         </div>
         <div class="home__features-item">
-          <img src="" alt="" />
+          <img src="../assets/images/home-online.png" alt="feature image" />
           <p>Sell with ease, from behind the counter</p>
           <a href="">
             Learn more
@@ -210,6 +210,15 @@
       border-radius: 5rem;
       margin-top: 9.6rem;
       box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transform: scale(1.15);
+      }
     }
   }
 
@@ -231,6 +240,8 @@
         width: 100%;
         height: 52rem;
         border-radius: 3rem;
+        object-fit: cover;
+        object-position: center;
       }
 
       p {
