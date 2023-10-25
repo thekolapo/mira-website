@@ -185,6 +185,47 @@
         </div>
       </div>
     </section>
+    <section class="home__faqs">
+      <h2>Got questions? We’ve got answers</h2>
+      <div ref="faqsWrapper" class="home__faqs-wrapper">
+        <img src="../assets/images/slow.png" alt="restaurant image" />
+        <div class="home__faqs-faq">
+          <h5>Is Mira an app?</h5>
+          <p>
+            Mira provides an easy and fast way to order and pay at restaurants.
+            Mira provides an easy and fast way to order and pay at restaurants.
+          </p>
+        </div>
+        <div class="home__faqs-faq">
+          <h5>Does Mira provide menu with pictures?</h5>
+          <p>
+            Mira provides an easy and fast way to order and pay at restaurants.
+            Mira provides an easy and fast way to order and pay at restaurants.
+          </p>
+        </div>
+        <div class="home__faqs-faq">
+          <h5>Does Mira provide menu with pictures?</h5>
+          <p>
+            Mira provides an easy and fast way to order and pay at restaurants.
+            Mira provides an easy and fast way to order and pay at restaurants.
+          </p>
+        </div>
+        <div class="home__faqs-faq">
+          <h5>Does Mira provide menu with pictures?</h5>
+          <p>
+            Mira provides an easy and fast way to order and pay at restaurants.
+            Mira provides an easy and fast way to order and pay at restaurants.
+          </p>
+        </div>
+        <div class="home__faqs-faq">
+          <h5>Does Mira provide menu with pictures?</h5>
+          <p>
+            Mira provides an easy and fast way to order and pay at restaurants.
+            Mira provides an easy and fast way to order and pay at restaurants.
+          </p>
+        </div>
+      </div>
+    </section>
     <section class="home__contact">
       <h3>Get started with Mira</h3>
       <form action="" class="home__contact-form">
@@ -218,6 +259,29 @@ export default {
         autoPlay: 3000,
       },
     }
+  },
+  mounted() {
+    this.initFaqs()
+  },
+  methods: {
+    initFaqs() {
+      const faqs = [
+        ...this.$refs.faqsWrapper.querySelectorAll('.home__faqs-faq'),
+      ]
+
+      faqs.forEach((faq, index) => {
+        const handleClick = () => {
+          const faqBody = faq.querySelectorAll('p')[0]
+          if (faqBody.offsetHeight === 0) {
+            faq.classList.add('active')
+          } else {
+            faq.classList.remove('active')
+          }
+        }
+
+        faq.addEventListener('click', handleClick)
+      })
+    },
   },
 }
 </script>
@@ -456,6 +520,71 @@ export default {
       p:last-of-type {
         font-size: 1.6rem;
         line-height: 2.8rem;
+      }
+    }
+  }
+
+  &__faqs {
+    h2 {
+      max-width: 97rem;
+    }
+
+    &-wrapper {
+      position: relative;
+      width: 100vw;
+      margin-top: 9.4rem;
+      left: calc(-50vw + 50%);
+
+      img {
+        position: absolute;
+        z-index: -1;
+        border-radius: 3rem;
+        width: 70rem;
+        height: 75rem;
+        object-fit: cover;
+        left: -6.5%;
+        transform: rotate(12deg);
+      }
+    }
+
+    &-faq {
+      cursor: pointer;
+      margin-left: auto;
+      border-top-left-radius: 3rem;
+      border-bottom-left-radius: 3rem;
+      border: 1px solid #2e6c61;
+      padding: 4rem 18rem 4rem 6rem;
+      background: white;
+      color: #2e6c61;
+
+      &.active {
+        background: #2e6c61;
+        color: white;
+
+        p {
+          height: auto;
+          margin-top: 1.8rem;
+        }
+      }
+
+      h5 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 2.2rem;
+        height: 0;
+        overflow: hidden;
+      }
+
+      &:not(:first-child) {
+        margin-top: 2.9rem;
+      }
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          width: 45% + $i * 5;
+        }
       }
     }
   }
