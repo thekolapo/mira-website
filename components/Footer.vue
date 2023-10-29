@@ -44,8 +44,8 @@
         <div class="footer__menu-column">
           <span class="footer__menu-title">Products</span>
           <nuxt-link to="order">Order at table</nuxt-link>
-          <a href="" target="_blank">Pay at table</a>
-          <a href="" target="_blank">Direct orders</a>
+          <nuxt-link to="pay">Pay at table</nuxt-link>
+          <nuxt-link to="direct-order">Direct orders</nuxt-link>
           <a href="" target="_blank">Reservations</a>
           <a href="" target="_blank">Payment terminals</a>
           <a href="" target="_blank">Point of sale software</a>
