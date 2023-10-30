@@ -27,6 +27,26 @@
       </nuxt-link>
     </div>
     <div class="nav__menu">
+      <div class="nav__menu-dropdown">
+        <span>Business type</span>
+        <div class="nav__menu-submenu">
+          <nuxt-link to="/">Restaurants</nuxt-link>
+          <nuxt-link to="/">Bars & Nighclubs</nuxt-link>
+          <nuxt-link to="/">Cafes</nuxt-link>
+          <nuxt-link to="/">Small & Medium retail</nuxt-link>
+          <nuxt-link to="/">Ghost kitchens</nuxt-link>
+        </div>
+      </div>
+      <div class="nav__menu-dropdown">
+        <span>Products</span>
+        <div class="nav__menu-submenu">
+          <nuxt-link to="/">Point of sale software</nuxt-link>
+          <nuxt-link to="/">Pay at table</nuxt-link>
+          <nuxt-link to="/">Direct orders</nuxt-link>
+          <nuxt-link to="/">Digital menus</nuxt-link>
+          <nuxt-link to="/">Kitchen display system</nuxt-link>
+        </div>
+      </div>
       <nuxt-link class="c-link" to="">Pricing</nuxt-link>
       <a class="c-link" href="mailto:info@getdesigncapital.com" target="_blank">
         Blog
@@ -56,11 +76,48 @@
   }
 
   &__menu {
+    display: flex;
+    flex-direction: row;
     margin-left: 6rem;
 
-    .c-link {
+    > * {
       &:not(:last-child) {
         margin-right: 3rem;
+      }
+    }
+
+    &-dropdown {
+      cursor: pointer;
+      position: relative;
+
+      &:hover {
+        .nav__menu-submenu {
+          display: block;
+        }
+      }
+    }
+
+    &-submenu {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      background: white;
+      padding: 3rem;
+      border-radius: 3rem;
+      margin-top: 0rem;
+      width: 25rem;
+      box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.4);
+      display: none;
+
+      a {
+        display: inline-block;
+        color: inherit;
+        text-decoration: none;
+        font-size: 1.7rem;
+
+        &:not(:first-child) {
+          margin-top: 1rem;
+        }
       }
     }
   }
