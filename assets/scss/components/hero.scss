@@ -1,0 +1,53 @@
+.hero {
+  max-width: 126rem;
+
+  &__subtext {
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    margin: 1.2rem 0 3rem;
+    max-width: 100rem;
+
+    @include screen('small') {
+      margin: 2.2rem 0 3.2rem;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+    }
+  }
+
+  &__ctas {
+    a:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__media {
+    position: relative;
+    width: 140rem;
+    left: calc(-70rem + 50%);
+    background: grey;
+    height: 70rem;
+    border-radius: 5rem;
+    margin-top: 9.6rem;
+    box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+
+    @include screen('small') {
+      width: 100%;
+      left: 0;
+      height: 25rem;
+      margin-top: 6rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transform: scale(1.15);
+
+      @include screen('small') {
+        transform: scale(1.18);
+      }
+    }
+  }
+}

@@ -1,21 +1,21 @@
 <template>
   <div class="order">
-    <section class="order__hero">
+    <section class="hero">
       <h1 class="u-font-h1">
         The FASTEST way to order & PAY AT YOUR RESTAURANT
       </h1>
-      <p class="order__hero-subtext">
+      <p class="hero__subtext">
         Customers scan the QR code on their table to instantly access a digital
         menu,‍ they can order and pay for food and beverages on their mobile
         devices safely and quickly, without waiting for a server.
       </p>
-      <div class="order__hero-ctas">
+      <div class="hero__ctas">
         <a href="" target="_blank" class="c-button">Get started for free</a>
         <a href="" target="_blank" class="c-button c-button--secondary">
           Speak wit our team
         </a>
       </div>
-      <div class="order__hero-media">
+      <div class="hero__media">
         <img src="../assets/images/order-hero.png" alt="hero image" />
       </div>
     </section>

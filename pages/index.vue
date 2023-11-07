@@ -1,18 +1,18 @@
 <template>
   <div class="home">
-    <section class="home__hero">
+    <section class="hero">
       <h1 class="u-font-h1">Modern point-of-sale for african restaurants</h1>
-      <p class="home__hero-subtext">
+      <p class="hero__subtext">
         Whether you run a single restaurant, bar, club, cafe, hotel or a chain
         of venues, enhance your order management and improve your revenue.
       </p>
-      <div class="home__hero-ctas">
+      <div class="hero__ctas">
         <a href="" target="_blank" class="c-button">Get started for free</a>
         <a href="" target="_blank" class="c-button c-button--secondary">
           Speak wit our team
         </a>
       </div>
-      <div class="home__hero-media">
+      <div class="hero__media">
         <img src="../assets/images/home-hero.png" alt="hero image" />
       </div>
     </section>
@@ -126,35 +126,35 @@
         </div>
       </div>
     </section>
-    <section class="home__customers">
+    <section class="customers">
       <h2 class="u-font-h2">Trusted by leading restaurants</h2>
       <client-only>
         <flickity
           ref="flickity"
-          class="home__customers-carousel"
+          class="customers__carousel"
           :options="flickityOptions"
         >
-          <div class="home__customers-restaurant">
+          <div class="customers__restaurant">
             <img src="../assets/images/pitstop.png" alt="restaurant image" />
             <p>PitStop Lagos</p>
           </div>
-          <div class="home__customers-restaurant">
+          <div class="customers__restaurant">
             <img src="../assets/images/circa.png" alt="restaurant image" />
             <p>Circa</p>
           </div>
-          <div class="home__customers-restaurant">
+          <div class="customers__restaurant">
             <img src="../assets/images/slow.png" alt="restaurant image" />
             <p>sLoW</p>
           </div>
-          <div class="home__customers-restaurant">
+          <div class="customers__restaurant">
             <img src="../assets/images/pitstop.png" alt="restaurant image" />
             <p>PitStop Lagos</p>
           </div>
-          <div class="home__customers-restaurant">
+          <div class="customers__restaurant">
             <img src="../assets/images/circa.png" alt="restaurant image" />
             <p>Circa</p>
           </div>
-          <div class="home__customers-restaurant">
+          <div class="customers__restaurant">
             <img src="../assets/images/slow.png" alt="restaurant image" />
             <p>sLoW</p>
           </div>
@@ -185,39 +185,39 @@
         </div>
       </div>
     </section>
-    <section class="home__faqs">
+    <section class="faqs">
       <h2>Got questions? We’ve got answers</h2>
-      <div ref="faqsWrapper" class="home__faqs-wrapper">
+      <div ref="faqsWrapper" class="faqs__wrapper">
         <img src="../assets/images/slow.png" alt="restaurant image" />
-        <div class="home__faqs-faq">
+        <div class="faqs-faq">
           <h5>Is Mira an app?</h5>
           <p>
             Mira provides an easy and fast way to order and pay at restaurants.
             Mira provides an easy and fast way to order and pay at restaurants.
           </p>
         </div>
-        <div class="home__faqs-faq">
+        <div class="faqs__faq">
           <h5>Does Mira provide menu with pictures?</h5>
           <p>
             Mira provides an easy and fast way to order and pay at restaurants.
             Mira provides an easy and fast way to order and pay at restaurants.
           </p>
         </div>
-        <div class="home__faqs-faq">
+        <div class="faqs__faq">
           <h5>Does Mira provide menu with pictures?</h5>
           <p>
             Mira provides an easy and fast way to order and pay at restaurants.
             Mira provides an easy and fast way to order and pay at restaurants.
           </p>
         </div>
-        <div class="home__faqs-faq">
+        <div class="faqs__faq">
           <h5>Does Mira provide menu with pictures?</h5>
           <p>
             Mira provides an easy and fast way to order and pay at restaurants.
             Mira provides an easy and fast way to order and pay at restaurants.
           </p>
         </div>
-        <div class="home__faqs-faq">
+        <div class="faqs__faq">
           <h5>Does Mira provide menu with pictures?</h5>
           <p>
             Mira provides an easy and fast way to order and pay at restaurants.
@@ -226,9 +226,9 @@
         </div>
       </div>
     </section>
-    <section class="home__contact">
+    <section class="contact">
       <h3>Get started with Mira</h3>
-      <form action="" class="home__contact-form">
+      <form action="" class="contact__form">
         <div>
           <input type="text" placeholder="First name" />
           <input type="text" placeholder="Last name" />
@@ -293,60 +293,6 @@ export default {
 
     @include screen('small') {
       margin-bottom: 12rem;
-    }
-  }
-
-  &__hero {
-    max-width: 126rem;
-
-    &-subtext {
-      font-size: 2.4rem;
-      line-height: 2.6rem;
-      margin: 1.2rem 0 3rem;
-      max-width: 100rem;
-
-      @include screen('small') {
-        margin: 2.2rem 0 3.2rem;
-        font-size: 1.8rem;
-        line-height: 2.2rem;
-      }
-    }
-
-    &-ctas {
-      a:not(:last-child) {
-        margin-right: 1rem;
-      }
-    }
-
-    &-media {
-      position: relative;
-      width: 140rem;
-      left: calc(-70rem + 50%);
-      background: grey;
-      height: 70rem;
-      border-radius: 5rem;
-      margin-top: 9.6rem;
-      box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.4);
-      overflow: hidden;
-
-      @include screen('small') {
-        width: 100%;
-        left: 0;
-        height: 25rem;
-        margin-top: 6rem;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        transform: scale(1.15);
-
-        @include screen('small') {
-          transform: scale(1.18);
-        }
-      }
     }
   }
 
@@ -497,42 +443,6 @@ export default {
     }
   }
 
-  &__customers {
-    &-carousel {
-      margin-top: 7.6rem;
-      width: 100vw;
-      position: relative;
-      width: 100vw;
-      left: calc(-50vw + 50%);
-    }
-
-    &-restaurant {
-      width: 22%;
-      margin: 0 2rem;
-
-      @include screen('small') {
-        width: 70%;
-      }
-
-      img {
-        width: 100%;
-        object-fit: cover;
-        height: 52rem;
-        background: grey;
-        border-radius: 3rem;
-
-        @include screen('small') {
-          height: 45rem;
-        }
-      }
-
-      p {
-        text-align: center;
-        margin-top: 2rem;
-      }
-    }
-  }
-
   &__operations {
     position: relative;
     padding: 13rem 0;
@@ -592,177 +502,6 @@ export default {
       p:last-of-type {
         font-size: 1.6rem;
         line-height: 2.8rem;
-      }
-    }
-  }
-
-  &__faqs {
-    h2 {
-      max-width: 97rem;
-    }
-
-    &-wrapper {
-      position: relative;
-      width: 100vw;
-      margin-top: 9.4rem;
-      left: calc(-50vw + 50%);
-
-      @include screen('med') {
-        width: 100%;
-        left: 0;
-        margin-top: 4rem;
-      }
-
-      img {
-        position: absolute;
-        z-index: -1;
-        border-radius: 3rem;
-        width: 70rem;
-        height: 75rem;
-        object-fit: cover;
-        left: -6.5%;
-        transform: rotate(12deg);
-
-        @include screen('med') {
-          display: none;
-        }
-      }
-    }
-
-    &-faq {
-      cursor: pointer;
-      margin-left: auto;
-      border-top-left-radius: 3rem;
-      border-bottom-left-radius: 3rem;
-      border: 1px solid #2e6c61;
-      padding: 4rem 18rem 4rem 6rem;
-      background: white;
-      color: #2e6c61;
-
-      @include screen('med') {
-        padding: 4rem;
-      }
-
-      &.active {
-        background: #2e6c61;
-        color: white;
-
-        p {
-          height: auto;
-          margin-top: 1.8rem;
-        }
-      }
-
-      h5 {
-        font-size: 3rem;
-
-        @include screen('med') {
-          font-size: 2.2rem;
-        }
-      }
-
-      p {
-        font-size: 2.2rem;
-        height: 0;
-        overflow: hidden;
-      }
-
-      &:not(:first-child) {
-        margin-top: 2.9rem;
-      }
-
-      @for $i from 1 through 10 {
-        &:nth-child(#{$i}) {
-          width: 45% + $i * 5;
-
-          @include screen('med') {
-            width: 100%;
-            margin-left: 0;
-            border-radius: 3rem;
-          }
-        }
-      }
-    }
-  }
-
-  &__contact {
-    background-color: $color-dark-green;
-    border-radius: 3rem;
-    padding: 10rem;
-    margin-top: 19rem;
-    color: white;
-    box-shadow: 0px 30px 50px 0px #00000066;
-
-    @include screen('small') {
-      margin-top: 9rem;
-      padding: 6rem 3rem 4rem;
-    }
-
-    h3 {
-      text-align: center;
-      font-size: 4.8rem;
-      line-height: 5rem;
-
-      @include screen('small') {
-        font-size: 3.6rem;
-        line-height: 4rem;
-      }
-    }
-
-    form {
-      margin-top: 9.6rem;
-      font-size: 1.6rem;
-
-      @include screen('small') {
-        margin-top: 4rem;
-      }
-
-      > * {
-        margin-bottom: 2rem;
-      }
-
-      input {
-        background: #17382e;
-        border-radius: 2rem;
-        border: none;
-        color: white;
-        padding: 2rem 2.7rem;
-        width: 100%;
-
-        &::placeholder {
-          color: white;
-        }
-      }
-
-      div {
-        display: flex;
-        justify-content: space-between;
-
-        @include screen('small') {
-          flex-wrap: wrap;
-        }
-
-        input {
-          width: 49%;
-
-          @include screen('small') {
-            width: 100%;
-          }
-
-          &:first-child {
-            margin-bottom: 2rem;
-          }
-        }
-      }
-
-      button {
-        margin-top: 1rem;
-
-        @include screen('small') {
-          width: 100%;
-          margin-top: 1.5rem;
-          font-size: 1.6rem;
-        }
       }
     }
   }

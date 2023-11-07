@@ -1,0 +1,88 @@
+.faqs {
+  h2 {
+    max-width: 97rem;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100vw;
+    margin-top: 9.4rem;
+    left: calc(-50vw + 50%);
+
+    @include screen('med') {
+      width: 100%;
+      left: 0;
+      margin-top: 4rem;
+    }
+
+    img {
+      position: absolute;
+      z-index: -1;
+      border-radius: 3rem;
+      width: 70rem;
+      height: 75rem;
+      object-fit: cover;
+      left: -6.5%;
+      transform: rotate(12deg);
+
+      @include screen('med') {
+        display: none;
+      }
+    }
+  }
+
+  &__faq {
+    cursor: pointer;
+    margin-left: auto;
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    border: 1px solid #2e6c61;
+    padding: 4rem 18rem 4rem 6rem;
+    background: white;
+    color: #2e6c61;
+
+    @include screen('med') {
+      padding: 4rem;
+    }
+
+    &.active {
+      background: #2e6c61;
+      color: white;
+
+      p {
+        height: auto;
+        margin-top: 1.8rem;
+      }
+    }
+
+    h5 {
+      font-size: 3rem;
+
+      @include screen('med') {
+        font-size: 2.2rem;
+      }
+    }
+
+    p {
+      font-size: 2.2rem;
+      height: 0;
+      overflow: hidden;
+    }
+
+    &:not(:first-child) {
+      margin-top: 2.9rem;
+    }
+
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        width: 45% + $i * 5;
+
+        @include screen('med') {
+          width: 100%;
+          margin-left: 0;
+          border-radius: 3rem;
+        }
+      }
+    }
+  }
+}
