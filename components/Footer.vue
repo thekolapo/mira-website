@@ -93,6 +93,10 @@
     margin-bottom: -100rem;
   }
 
+  @media screen and (max-width: 480px) {
+    margin-top: 12rem;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -127,6 +131,10 @@
 
     @include screen('small') {
       --width: 165vw;
+    }
+
+    @media screen and (max-width: 480px) {
+      --width: 0vw;
     }
   }
 
@@ -216,6 +224,11 @@
       width: 100vw;
       left: calc(-50vw + 50%);
       background-color: $background-color;
+
+      @include screen('small') {
+        height: 30rem;
+        padding-top: 8rem;
+      }
 
       > * {
         width: 20vw;
