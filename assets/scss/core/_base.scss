@@ -24,7 +24,7 @@ body {
   background-color: #ffffff;
 
   @include screen('small') {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 3rem;
   }
 }

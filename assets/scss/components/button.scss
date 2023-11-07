@@ -9,6 +9,11 @@
   outline: none;
   text-decoration: none;
 
+  @include screen('small') {
+    padding: 1.2rem 1.5rem;
+    font-size: 1.4rem;
+  }
+
   &--secondary {
     color: $color-dark-green;
     background-color: transparent;

@@ -307,6 +307,8 @@ export default {
 
       @include screen('small') {
         margin: 2.2rem 0 3.2rem;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
       }
     }
 
@@ -327,12 +329,23 @@ export default {
       box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.4);
       overflow: hidden;
 
+      @include screen('small') {
+        width: 100%;
+        left: 0;
+        height: 25rem;
+        margin-top: 6rem;
+      }
+
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
         transform: scale(1.15);
+
+        @include screen('small') {
+          transform: scale(1.18);
+        }
       }
     }
   }
@@ -345,10 +358,24 @@ export default {
       margin-top: 7.6rem;
       display: flex;
       justify-content: space-between;
+
+      @include screen('small') {
+        width: 100%;
+        left: 0;
+        flex-wrap: wrap;
+      }
     }
 
     &-item {
       width: 31%;
+
+      @include screen('small') {
+        width: 100%;
+
+        &:not(:first-child) {
+          margin-top: 5rem;
+        }
+      }
 
       img {
         background: #c4c4c4;
@@ -357,6 +384,10 @@ export default {
         border-radius: 3rem;
         object-fit: cover;
         object-position: center;
+
+        @include screen('small') {
+          height: 30rem;
+        }
       }
 
       p {
@@ -413,6 +444,17 @@ export default {
         background: $color-dark-green;
         width: 50%;
       }
+
+      @include screen('small') {
+        left: 0;
+        width: 100%;
+        flex-wrap: wrap;
+        height: 36rem;
+
+        & > * {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -426,11 +468,20 @@ export default {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+
+      @include screen('small') {
+        width: 100%;
+        left: 0;
+      }
     }
 
     &-item {
       width: 48%;
       margin-bottom: 4.2rem;
+
+      @include screen('small') {
+        width: 100%;
+      }
 
       img {
         width: 100%;
@@ -459,12 +510,20 @@ export default {
       width: 22%;
       margin: 0 2rem;
 
+      @include screen('small') {
+        width: 70%;
+      }
+
       img {
         width: 100%;
         object-fit: cover;
         height: 52rem;
         background: grey;
         border-radius: 3rem;
+
+        @include screen('small') {
+          height: 45rem;
+        }
       }
 
       p {
@@ -505,11 +564,24 @@ export default {
       flex-direction: row;
       justify-content: space-between;
       margin-top: 8rem;
+
+      @include screen('small') {
+        flex-wrap: wrap;
+      }
     }
 
     &-item {
       width: 33%;
       max-width: 36rem;
+
+      @include screen('small') {
+        width: 100%;
+        max-width: unset;
+
+        &:not(:last-child) {
+          margin-bottom: 5rem;
+        }
+      }
 
       p:first-of-type {
         font-size: 3.2rem;
@@ -535,6 +607,12 @@ export default {
       margin-top: 9.4rem;
       left: calc(-50vw + 50%);
 
+      @include screen('med') {
+        width: 100%;
+        left: 0;
+        margin-top: 4rem;
+      }
+
       img {
         position: absolute;
         z-index: -1;
@@ -544,6 +622,10 @@ export default {
         object-fit: cover;
         left: -6.5%;
         transform: rotate(12deg);
+
+        @include screen('med') {
+          display: none;
+        }
       }
     }
 
@@ -557,6 +639,10 @@ export default {
       background: white;
       color: #2e6c61;
 
+      @include screen('med') {
+        padding: 4rem;
+      }
+
       &.active {
         background: #2e6c61;
         color: white;
@@ -569,6 +655,10 @@ export default {
 
       h5 {
         font-size: 3rem;
+
+        @include screen('med') {
+          font-size: 2.2rem;
+        }
       }
 
       p {
@@ -584,6 +674,12 @@ export default {
       @for $i from 1 through 10 {
         &:nth-child(#{$i}) {
           width: 45% + $i * 5;
+
+          @include screen('med') {
+            width: 100%;
+            margin-left: 0;
+            border-radius: 3rem;
+          }
         }
       }
     }
@@ -597,14 +693,29 @@ export default {
     color: white;
     box-shadow: 0px 30px 50px 0px #00000066;
 
+    @include screen('small') {
+      margin-top: 9rem;
+      padding: 6rem 3rem 4rem;
+    }
+
     h3 {
       text-align: center;
       font-size: 4.8rem;
+      line-height: 5rem;
+
+      @include screen('small') {
+        font-size: 3.6rem;
+        line-height: 4rem;
+      }
     }
 
     form {
       margin-top: 9.6rem;
       font-size: 1.6rem;
+
+      @include screen('small') {
+        margin-top: 4rem;
+      }
 
       > * {
         margin-bottom: 2rem;
@@ -627,13 +738,31 @@ export default {
         display: flex;
         justify-content: space-between;
 
+        @include screen('small') {
+          flex-wrap: wrap;
+        }
+
         input {
           width: 49%;
+
+          @include screen('small') {
+            width: 100%;
+          }
+
+          &:first-child {
+            margin-bottom: 2rem;
+          }
         }
       }
 
       button {
         margin-top: 1rem;
+
+        @include screen('small') {
+          width: 100%;
+          margin-top: 1.5rem;
+          font-size: 1.6rem;
+        }
       }
     }
   }

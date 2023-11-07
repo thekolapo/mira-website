@@ -86,6 +86,10 @@
       }
     }
 
+    @include screen('small') {
+      display: none;
+    }
+
     &-dropdown {
       cursor: pointer;
       position: relative;
@@ -129,6 +133,10 @@
       margin-right: 2.7rem;
       color: black;
       text-decoration: none;
+
+      @include screen('small') {
+        display: none;
+      }
     }
   }
 }

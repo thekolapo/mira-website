@@ -88,10 +88,19 @@
   padding-top: 15rem;
   color: white;
 
+  @include screen('med') {
+    padding-top: 5rem;
+    margin-bottom: -100rem;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+
+    @include screen('med') {
+      flex-wrap: wrap;
+    }
   }
 
   &::before {
@@ -108,17 +117,17 @@
     transform: translateY(-9.5%);
     z-index: 2;
 
-    // @include respond('desktop') {
-    //   // --width: 120vw;
-    // }
+    @include screen('desktop') {
+      --width: 120vw;
+    }
 
-    // @include respond('tablet') {
-    //   // --width: 140vw;
-    // }
+    @include screen('tablet') {
+      --width: 140vw;
+    }
 
-    // @include respond('mobile') {
-    //   // --width: 165vw;
-    // }
+    @include screen('small') {
+      --width: 165vw;
+    }
   }
 
   &::after {
@@ -131,6 +140,18 @@
     height: 500px;
     margin: 0 auto;
     background-color: $background-color;
+
+    @include screen('large') {
+      height: 650px;
+    }
+
+    @include screen('med') {
+      height: 700px;
+    }
+
+    @include screen('small') {
+      height: 1200px;
+    }
   }
 
   > * {
@@ -142,10 +163,31 @@
     display: flex;
     justify-content: space-between;
 
+    @include screen('med') {
+      width: 100%;
+    }
+
+    @include screen('small') {
+      flex-wrap: wrap;
+    }
+
     &-column {
       display: flex;
       flex-direction: column;
       margin-left: 8rem;
+
+      @include screen('med') {
+        margin-top: 6rem;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      @include screen('small') {
+        width: 100%;
+        margin-left: 0;
+      }
     }
 
     &-title {
@@ -174,6 +216,10 @@
       width: 100vw;
       left: calc(-50vw + 50%);
       background-color: $background-color;
+
+      > * {
+        width: 20vw;
+      }
     }
 
     &-instagram {
