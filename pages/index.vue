@@ -189,7 +189,7 @@
       <h2>Got questions? We’ve got answers</h2>
       <div ref="faqsWrapper" class="faqs__wrapper">
         <img src="../assets/images/slow.png" alt="restaurant image" />
-        <div class="faqs-faq">
+        <div class="faqs__faq">
           <h5>Is Mira an app?</h5>
           <p>
             Mira provides an easy and fast way to order and pay at restaurants.
@@ -265,9 +265,7 @@ export default {
   },
   methods: {
     initFaqs() {
-      const faqs = [
-        ...this.$refs.faqsWrapper.querySelectorAll('.home__faqs-faq'),
-      ]
+      const faqs = [...this.$refs.faqsWrapper.querySelectorAll('.faqs__faq')]
 
       faqs.forEach((faq, index) => {
         const handleClick = () => {
